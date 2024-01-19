@@ -9,6 +9,7 @@ from vqvae import VQVAE
 from pixelsnail import PixelSNAIL
 
 
+
 @torch.no_grad()
 def sample_model(model, device, batch, size, temperature, condition=None):
     row = torch.zeros(batch, *size, dtype=torch.int64).to(device)
