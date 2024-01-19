@@ -132,6 +132,8 @@ if __name__ == '__main__':
     if 'model' in ckpt:
         model.load_state_dict(ckpt['model'])
 
+    ##
+
     model = model.to(device)
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
 
